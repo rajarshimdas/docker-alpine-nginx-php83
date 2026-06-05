@@ -1,0 +1,113 @@
+/*
++-------------------------------------------------------+
+| Rajarshi Das                                          |
++-------------------------------------------------------+
+| Created: 12-Mar-2026                                  |
+| Updated:                                              |
++-------------------------------------------------------+
+*/
+
+@import url("extras/normalize.css");
+
+/* =========================
+   Fonts
+========================= */
+@font-face {
+  font-family: "ci4fontR";
+  src: url("fonts/IBMPlexSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: optional;
+}
+
+@font-face {
+  font-family: "ci4fontB";
+  src: url("fonts/IBMPlexSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: optional;
+}
+
+/* =========================
+   Design Tokens
+========================= */
+:root {
+  /* Colors */
+  --color-canvas-default: #0d1117;
+  --color-canvas-subtle: #161b22;
+
+  --color-border-default: #6a7584;
+  --color-border-muted: #4f5863;
+
+  --color-fg-default: #c9d1d9;
+  --color-fg-muted: #8b949e;
+  --color-fg-accent: #58a6ff;
+
+  --color-accent-fg: #f78166;
+  --color-success-fg: #3fb950;
+  --color-danger-fg: #f85149;
+
+  --color-white: #ffffff;
+  --color-hover: #30363d;
+  --color-text-strong: #f0f6fc;
+
+  /* Typography */
+  --fontStack-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", ci4fontR, Helvetica, Arial, sans-serif;
+
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-md: 18px;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+
+  /* Radius */
+  --radius: 6px;
+}
+
+/* =========================
+   Base
+========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  /* background: var(--color-canvas-default); */
+  background-color: whitesmoke;
+  color: var(--color-fg-default);
+  font-family: var(--fontStack-sans);
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+}
+
+/* =========================
+   Typography
+========================= */
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+small {
+  color: var(--color-fg-muted);
+}

@@ -1,0 +1,1 @@
+http://dockerhost:8085/phpinfo.php
