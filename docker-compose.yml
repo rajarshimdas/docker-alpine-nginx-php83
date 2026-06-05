@@ -1,0 +1,36 @@
+services:
+  nginx:
+    image: nginx:stable-alpine
+    container_name: rd-nginx
+
+    ports:
+      - "127.0.0.25:8085:80"
+
+    volumes:
+      - ./app:/var/www/html/public
+      - ./etc/nginx/:/etc/nginx/conf.d/
+
+    depends_on:
+      - php
+
+    networks:
+      - rd-appnet
+
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: rd-php-fpm
+
+    volumes:
+      - ./app:/var/www/html/public
+      - ./etc/php/:/usr/local/etc/php/conf.d/
+    networks:
+      - rd-appnet
+
+volumes:
+  postgres_data:
+
+networks:
+  rd-appnet:
