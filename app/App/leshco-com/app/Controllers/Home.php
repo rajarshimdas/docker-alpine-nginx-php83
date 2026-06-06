@@ -6,6 +6,10 @@ class Home extends BaseController
 {
     public function index(): string
     {
-        return view('welcome_message');
+        $data = [
+            'base_url' => base_url(),
+            'title' => 'LESHCO :: Home',
+        ];
+        return view('home', $data);
     }
 }

@@ -31,6 +31,9 @@
 ========================= */
 :root {
   /* Colors */
+  --color-text-default: #474748;
+  --color-text-muted: #808181;  
+  
   --color-canvas-default: #0d1117;
   --color-canvas-subtle: #161b22;
 
@@ -80,7 +83,7 @@ body {
   margin: 0;
   /* background: var(--color-canvas-default); */
   background-color: whitesmoke;
-  color: var(--color-fg-default);
+  color: var(--color-text-default);
   font-family: var(--fontStack-sans);
   font-size: var(--font-size-base);
   line-height: 1.5;
